@@ -1,0 +1,31 @@
+{
+    "name": "Brain Juice #1509",
+    "description": "Brain Juice is a phase based NFT collection consist of marvelous brains.",
+    "image": "https://brainjuicenft.up.railway.app/api/image/1510.png",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "City"
+        },
+        {
+            "trait_type": "Flesh",
+            "value": "Worms"
+        },
+        {
+            "trait_type": "Eye",
+            "value": "Mad"
+        },
+        {
+            "trait_type": "Accessory",
+            "value": "Bubblegum"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Common"
+        },
+        {
+            "trait_type": "Phase",
+            "value": "1"
+        }
+    ]
+}

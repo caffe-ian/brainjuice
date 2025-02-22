@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Brain Juice</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=0.6, user-scalable=no"/>
+		<meta name="author" content="Brain Juice">
+		<meta name="og:title" content="Brain Juice | Homepage">
+		<meta name="og:description" content="Brain Juice is a phase-based NFT collection consist of marvelous brains. The best P2E, pseudo-DAO and phase-based NFT collection.">
+		<meta name="og:site_name" content="Brain Juice">
+		<meta name="og:type" content="website">
+		<meta name="og:image" content="../assets/css/images/pic0.png">
+		<meta name="og:image:alt" content="Brain Juice Banner">
+		<link rel="stylesheet" href="../assets/css/main.css"/>
+		<link rel="stylesheet" href="../assets/jqueryui/jquery-ui.css"/>
+		<link rel="stylesheet" href="../assets/jqueryui/jquery-ui.structure.css"/>
+		<link rel="stylesheet" href="../assets/jqueryui/jquery-ui.theme.css"/>
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/2b667268-f2a4-4c49-8f96-268c69b131d4/icon.ico?v=1647060622260">
+	</head>
+	<body class="is-preload">
+		<div id="transition" class="white"></div>
+		<a href="#" class="icon interactable top"><img class="image fit" src="../assets/css/images/top.svg"/><span class="label">To the top</span></a>
+		<div class="error">
+			<div class="error-container">
+				<h2>Whoops!</h2>
+				<p>Unknown Error</p>
+				<ok class="error-button" onclick="closealert()">Okay</ok>
+			</div>
+		</div>
+
+    <!-- Header -->
+      <header class="header">
+				<div class="actions header-right">
+					<a href="https://discord.gg/CPYXNpbmVz" class="icon brands fa-discord discord-header interactable"><span class="label">Discord</span></a>
+					<dropdown onclick="showDropdown()" class="dropdown icon interactable" style=""><img class="icon-2" src="../assets/css/images/dashboard.svg" width="45px" height="45px"/><span class="label">Dashboard</span></dropdown>
+					<div class="dropdown-content interactable">
+						<a href="" onclick="connectWallet()" id="connect">Connect Wallet</a>
+						<a href="" onclick="gotoDashboard()">Go to Dashboard</a>
+					</div>
+				</div>
+			</header>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">About us</a></li>
+							<li><a href="#two">Road map</a></li>
+							<li><a href="#three">Resources</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+		<main id="momentum-scroll" class="momentum-scroll-home">
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper fullscreen fade-up">
+						<div class="inner">
+							<div class="column-left">
+								<arrow onClick="slide()" class="icon interactable fa-light left-arrow"><img class="la" src="../assets/css/images/left.svg"/><span class="label">To the left</span></arrow>
+								<div class="column-left-content show">
+									<h1>Brain Juice <a href="#features" class="phase" style="white-space: nowrap">• &nbsp;Phase 1</a></h1>
+									<p>Brain Juice is a phase-based NFT collection consist of marvelous brains. The best P2E, pseudo-DAO and phase-based NFT collection.</p>
+									<ul class="actions">
+										<li style="width:100%"><a href="https://discord.gg/CPYXNpbmVz" class="button fit scrolly">Join our Discord</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="column-right">
+								<arrow onClick="slide()" class="icon interactable fa-light right-arrow show"><img class="ra" src="../assets/css/images/right.svg"/><span class="label">To the right</span></arrow>
+								<div class="column-right-content">
+									<h1>Mint&nbsp;<a href="#features" class="phase">• &nbsp;Phase 1</a></h1>
+									<p>Minting date will be announced in our Discord server. Read the <a href="#three">FAQs</a>. Check us out on <a href="">OpenSea</a>!</p>
+									<ul class="actions">
+										<li style="width:100%"><a href="/mint" class="button fit scrolly">Mint</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<img class="image" src="assets/css/images/normal.png"/>
+							<div class="content">
+								<div class="inner">
+									<h2>About the Project</h2>
+									<p>The origin, our goal and how we started this project.</p>
+									<ul class="actions">
+										<li><a href="project" class="button">Read more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section id="features">
+							<img class="image" src="assets/css/images/infected.png"/>
+							<div class="content">
+								<div class="inner">
+									<h2>Exclusive Features and Utilities</h2>
+									<p>What features and what utilities we possess to make this NFT collection a successful project.</p>
+									<ul class="actions">
+										<li><a href="features" class="button">Read more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section>
+							<img class="image" src="assets/css/images/glow.png"/>
+							<div class="content">
+								<div class="inner">
+									<h2>Gallery</h2>
+									<p>Sneak peeks on upcoming Brain Juice releases!</p>
+									<ul class="actions">
+										<li><a href="gallery" class="button">Read more</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up" style="display: flex;">
+						<div class="inner">
+							<h2>Road map</h2>
+							<p>The road map below shows our plan to achieve success for this NFT collection. Be sure to check it out occasionally as it will be updated!</p>
+							<div class="road-map-container">
+								<div class="road-map-line">
+									<span class="large-road-map-bullet" style="transform: translateY(-1em);"></span>
+									<span class="road-map-bullet" style="transform: translateY(14em);"></span>
+									<span class="road-map-bullet" style="transform: translateY(29em);"></span>
+									<span class="road-map-bullet" style="transform: translateY(44em);"></span>
+									<span class="road-map-bullet" style="transform: translateY(59em);"></span>
+									<span class="road-map-bullet" style="transform: translateY(74em);"></span>
+									<span class="road-map-bullet" style="transform: translateY(89em);"></span>
+									<span class="road-map-bullet" style="transform: translateY(104em);"></span>
+									<span class="road-map-bullet" style="transform: translateY(119em);"></span>
+									<span class="road-map-bullet" style="transform: translateY(134em);"></span>
+									<span class="road-map-bullet" style="transform: translateY(149em);"></span>
+									<span class="large-road-map-bullet" style="transform: translateY(164em);"></span>
+								</div>
+								<div class="goal-container" style="width: 100%;">
+									<h2 class="road-map-point">Origin
+										<p class="road-map-point-description">
+											Launching the project
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container" style="transform: translateY(13.4em);">
+									<h2 class="road-map-title">Getting Started
+										<p class="road-map-description">
+											Creating social media accounts, our features and utilities.
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container road-map-right" style="transform: translateY(28.4em);">
+									<h2 class="road-map-title">Phase 1
+										<p class="road-map-description">
+											Phase 1 of our <a href="../features#phase">phase-based</a> NFT collection. Promoting the project, building community, opening <a href="/features#presale">whitelist</a> spots, hosting <a href="../features#events">events</a>.
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container" style="transform: translateY(43.4em);">
+									<h2 class="road-map-title">ARG
+										<p class="road-map-description">
+											Beginning of the ARG. Read it <a href="/features#arg">here</a> for the detailed information. Don't miss out the $1,000 prize!
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container road-map-right" style="transform: translateY(58.4em);">
+									<h2 class="road-map-title">Presale
+										<p class="road-map-description">
+											Presale before public mint. Price is estimated to be 0.05 ETH. Read it <a href="/features#presale">here</a> for detailed information.
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container" style="transform: translateY(73.4em);">
+									<h2 class="road-map-title">Public Mint
+										<p class="road-map-description">
+											The public mint! Price is estimated to be 0.07 ETH.
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container road-map-right" style="transform: translateY(88.4em);">
+									<h2 class="road-map-title">Reavealing
+										<p class="road-map-description">
+											We will be revealing what you got after every NFT has been minted.
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container" style="transform: translateY(103.4em);">
+									<h2 class="road-map-title">Voting
+										<p class="road-map-description">
+											Voting can be accessed through our dashboard in our official website after public mint. Read more about our exclusive <a href="/features#community">community</a> and <a href="/features#voting">voting</a>.
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container road-map-right" style="transform: translateY(118.4em);">
+									<h2 class="road-map-title">P2E (Play to Earn)
+										<p class="road-map-description">
+											Play our official Discord bot in our Discord server to earn money that can be traded for ETH! Read more about the P2E system <a href="/features#p2e">here</a>.
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container" style="transform: translateY(133.4em);">
+									<h2 class="road-map-title">Phase 2
+										<p class="road-map-description">
+											Releasing Phase 2 Brain Juice's. Revise from Phase 1, starting the new ARG if the current has been solved.
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container road-map-right" style="transform: translateY(148.4em);">
+									<h2 class="road-map-title">IO Game
+										<p class="road-map-description">
+											Creating a free to play IO game for our community and everyone around the world. Exclusive benefits for holders. Read more about it <a href="/features#iogame">here</a>.
+										</p>
+									</h2>
+								</div>
+								<div class="goal-container" style="width: 100%;">
+									<h2 class="road-map-point-end">To be announced
+										<p class="road-map-point-description">
+											Phase 3, future plans will be<br> announced soon...
+										</p>
+									</h2>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Resources</h2>
+							<div class="split style1">
+								<section id="resources">
+									<ul class="actions">
+										<li style="width:100%"><a href="faq" class="button fit scrolly">FAQs</a></li>
+									</ul>
+									<ul class="actions">
+										<li style="width:100%"><a href="voting-info" class="button fit scrolly">Voting Info</a></li>
+									</ul>
+									<ul class="actions">
+										<li style="width:100%"><a href="partners" class="button fit scrolly">Our Partners</a></li>
+									</ul>
+									<ul class="actions">
+										<li style="width:100%"><a href="privacy-policy" class="button fit scrolly">Privacy Policy</a></li>
+									</ul>
+								</section>
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Social</h3>
+											<ul class="icons">
+												<li><a href="https://discord.gg/CPYXNpbmVz" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+												<li><a href="https://twitter.com/BrainJuiceNFT" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+												<li><a href="https://www.instagram.com/brainjuice.nft/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+												<li><a href="https://www.reddit.com/user/BrainJuiceNFT" class="icon brands fa-reddit"><span class="label">Reddit</span></a></li>
+											</ul>
+										</li>
+										<li>
+											<h3>Email</h3>
+											brainjuicenft@gmail.com
+										</li>
+										<li>
+											<h3>Collaborators</h3>
+											Email us or open a support ticket in our Discord server to collaborate!
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+			</div>
+
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt home-footer">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; 2022 Brain Juice NFT. All rights reserved.</li>
+						<li><a href="faq">FAQs</a></li>
+						<li><a href="/privacy-policy">Privacy Policy</a></li>
+						<li><a href="" onclick="alert('Smart contract will be released to public soon')">Verified Smart Contract</a></li>
+					</ul>
+				</div>
+			</footer>
+		</main>
+
+
+		<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/web3modal-dynamic-import@1.11.1/dist/index.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.7/dist/umd/index.min.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/jqueryui/jquery-ui.js"></script>
+
+	</body>
+</html>

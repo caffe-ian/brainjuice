@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Brain Juice</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="author" content="Brain Juice">
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/2b667268-f2a4-4c49-8f96-268c69b131d4/icon.ico?v=1647060622260">
+  </head>
+  <body class="is-preload">
+    <div id="transition" class="white"></div>
+    <div class="error">
+      <div class="error-container">
+        <h2>Whoops!</h2>
+        <p>Unknown Error</p>
+        <ok class="error-button" onclick="closealert()">Okay</ok>
+      </div>
+    </div>
+
+    <div id="main" class="wrapper" style="height: 86vh;">
+      <div class="inner" style="text-align: center;padding-top: 8em;">
+        <h1>Verifying...</h1>
+        <h3 class="subtitle" style="line-height:2">Awaiting verification</h3>
+        <h3 class="subtitle" style="line-height:2">Verification is required everytime you change a device or after disconnecting your wallet</h3>
+        <div style="padding-top: 5em;">
+          <h3>Nothing is happening?</h3>
+          <ul class="actions">
+            <li style="width: 100%;padding-top: 1em;"><a href="" onclick="gotoDashboard()" class="button scrolly" style="width:75%">Try Again</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="inner">
+        <ul class="menu">
+          <li>&copy; 2022 Brain Juice NFT. All rights reserved.</li>
+          <li><a href="faq">FAQs</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="" onclick="alert('Smart contract will be released to public soon')">Verified Smart Contract</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+      <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/web3modal-dynamic-import@1.11.1/dist/index.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.7/dist/umd/index.min.js"></script>
+      <script src="../assets/js/jquery.min.js"></script>
+      <script src="../assets/js/jquery.scrollex.min.js"></script>
+      <script src="../assets/js/jquery.scrolly.min.js"></script>
+      <script src="../assets/js/browser.min.js"></script>
+      <script src="../assets/js/breakpoints.min.js"></script>
+      <script src="../assets/js/util.js"></script>
+      <script src="../assets/js/verify.js"></script>
+      <script src="../assets/js/main.js"></script>
+      <script src="../assets/jqueryui/jquery-ui.js"></script>
+      
+
+  </body>
+</html>

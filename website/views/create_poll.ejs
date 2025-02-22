@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Brain Juice - Create Poll</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="author" content="Brain Juice">
+    <meta name="og:title" content="Brain Juice | Create Poll">
+    <meta name="og:description" content="Brain Juice is a phase-based NFT collection consist of marvelous brains. Create a poll!">
+    <meta name="og:site_name" content="Brain Juice">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="../assets/css/images/pic0.png">
+    <meta name="og:image:alt" content="Brain Juice Banner">
+    <link rel="stylesheet" href="../assets/css/main.css"/>
+    <link rel="stylesheet" href="../assets/jqueryui/jquery-ui.css"/>
+    <link rel="stylesheet" href="../assets/jqueryui/jquery-ui.structure.css"/>
+    <link rel="stylesheet" href="../assets/jqueryui/jquery-ui.theme.css"/>
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/2b667268-f2a4-4c49-8f96-268c69b131d4/icon.ico?v=1647060622260">
+  </head>
+  <body class="is-preload voting">
+    <div id="transition" class="white"></div>
+    <div class="error">
+      <div class="error-container">
+        <h2>Whoops!</h2>
+        <p>Unknown Error</p>
+        <ok class="error-button" onclick="closealert()">Okay</ok>
+      </div>
+    </div>
+
+    <!-- Header -->
+      <header class="header">
+        <div class="actions header-right">
+          <a href="https://discord.gg/CPYXNpbmVz" class="icon brands fa-discord discord-header interactable"><span class="label">Discord</span></a>
+          <dropdown onclick="showDropdown()" class="dropdown icon interactable" style=""><img class="icon-2" src="../assets/css/images/dashboard.svg" width="45px" height="45px"/><span class="label">Dashboard</span></dropdown>
+          <div class="dropdown-content interactable">
+            <a id="active-polls" href="" onclick="gotoVoting()">Back to Voting</a>
+          </div>
+        </div>
+      </header>
+
+    <main id="momentum-scroll">
+      <div id="wrapper">
+        <section class="wrapper">
+          <div class="inner create-poll">
+            <h2>Create Poll</h2>
+            <div class="poll-form">
+              <label for="discord_id">Discord ID</label>
+              <input type="text" id="discord_id" name="discord_id" value="<%= discord_id %>" readonly><br>
+              <label for="type">Type</label>
+              <input type="radio" id="suggestion" name="type" value="Suggestion" checked="checked">
+              <label for="suggestion">Suggestion</label><br>
+              <input type="radio" id="decision" name="type" value="Decision">
+              <label for="decision">Decision</label><br>
+              <input type="radio" id="fundrequest" name="type" value="Fund request">
+              <label for="fundrequest">Fund request</label>
+              <label id="amount-label" for="amount" style="overflow:hidden;transition: 0.5s;opacity: 0;">Amount</label>
+              <input type="number" id="amount" name="amount" min="0.01" max="1" step="0.001" style="height:0;border:none;box-shadow: none;" placeholder="Must be between 0.01 to 1. Example: 0.015"><br>
+              <label for="title">Title</label>
+              <p id="title-counter" style="margin-bottom: 0;">0/50</p>
+              <input type="text" id="title" name="title" required minlength="4" maxlength="50" placeholder="4 to 50 characters limit." oninput="countCharacter(this)"><br>
+              <label for="description">Description</label>
+              <p id="description-counter" style="margin-bottom: 0;">0/400</p>
+              <textarea type="text" id="description" name="description" required minlength="10" maxlength="400" style="margin-bottom: 2em;overflow-wrap: break-word;resize: none;" rows="5" placeholder="10 to 400 characters limit." oninput="countCharacter(this)"></textarea><br>
+              <h2>Preview</h2>
+              <div class="poll">
+                <h2 class="poll-id"><a>#0</a></h2>
+                <a class="report-button">Report</a>
+                <div class="poll-header">
+                  <p class="poll-author">Discord ID • <sep><%= discord_id %></sep></p>
+                  <p class="poll-type">Type • <sep>Suggestion</sep></p>
+                </div>
+                <h2 class="poll-title"></h2>
+                <hr class="poll-hr">
+                <p class="poll-description"></p>
+                <p class="poll-time" value="0">3d 0h 0m 0s</p>
+                <div class="poll-votes">
+                  <a class="poll-dope">DOPE<br><sep>0</sep></a>
+                  <a class="poll-nope">NOPE<br><sep>0</sep></a>
+                </div>
+              </div>
+              <ul class="actions">
+                <li style="width:100%"><a href="" onclick="createPoll()" class="button" style="width:47%">Create</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer id="footer">
+        <div class="inner">
+          <ul class="menu">
+            <li>&copy; 2022 Brain Juice NFT. All rights reserved.</li>
+            <li><a href="faq">FAQs</a></li>
+            <li><a id="v" href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="" onclick="alert('Smart contract will be released to public soon')">Verified Smart Contract</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Scripts -->
+      <script>const address = "<%= address %>";const discord_id = "<%= discord_id %>"</script>
+      <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/web3modal-dynamic-import@1.11.1/dist/index.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.7/dist/umd/index.min.js"></script>
+      <script src="../assets/js/jquery.min.js"></script>
+      <script src="../assets/js/jquery.scrollex.min.js"></script>
+      <script src="../assets/js/jquery.scrolly.min.js"></script>
+      <script src="../assets/js/browser.min.js"></script>
+      <script src="../assets/js/breakpoints.min.js"></script>
+      <script src="../assets/js/util.js"></script>
+      <script src="../assets/js/main.js"></script>
+      <script src="../assets/jqueryui/jquery-ui.js"></script>
+      <script src="../assets/js/create-poll.js"></script>
+
+  </body>
+</html>

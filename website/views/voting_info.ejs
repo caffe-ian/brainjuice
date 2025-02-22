@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Brain Juice - Voting info</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="author" content="Brain Juice">
+		<meta name="og:title" content="Brain Juice | Voting Info">
+		<meta name="og:description" content="Brain Juice is a phase-based NFT collection consist of marvelous brains. Information about our voting system!">
+		<meta name="og:site_name" content="Brain Juice">
+		<meta name="og:type" content="website">
+		<meta name="og:image" content="../assets/css/images/pic1.png">
+		<meta name="og:image:alt" content="Brain Juice Banner">
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/2b667268-f2a4-4c49-8f96-268c69b131d4/icon.ico?v=1647060622260">
+	</head>
+	<body class="is-preload">
+		<div id="transition" class="white"></div>
+		<a href="#" class="icon interactable top"><img class="image fit" src="../assets/css/images/top.svg"/><span class="label">To the top</span></a>
+
+		<!-- Header -->
+			<header class="header">
+				<div class="actions header-left">
+					<a href=".." class="icon interactable"><img class="icon-2" src="../assets/css/images/home.svg" width="45px" height="45px"/><span class="label">Home</span></a>
+				</div>
+				<div class="actions header-right">
+					<a href="https://discord.gg/CPYXNpbmVz" class="icon brands fa-discord discord-header interactable"><span class="label">Discord</span></a>
+					<dropdown onclick="showDropdown()" class="dropdown icon interactable" style=""><img class="icon-2" src="../assets/css/images/dashboard.svg" width="45px" height="45px"/><span class="label">Dashboard</span></dropdown>
+					<div class="dropdown-content interactable">
+						<a href="" onclick="connectWallet()" id="connect">Connect Wallet</a>
+						<a href="" onclick="gotoDashboard()">Go to Dashboard</a>
+					</div>
+				</div>
+			</header>
+
+		<!-- Wrapper -->
+		<main id="momentum-scroll">
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main2" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Voting info</h1>
+							<span class="image fit"><img src="../assets/css/images/pic1.png" alt="" /></span>
+							<p class="description">We do not want members creating pointless polls without a purpose. Before creating a poll, you are recommended to take consideration and discuss with our community members in our official <a href="https://discord.gg/CPYXNpbmVz" style="border-bottom: none;">Discord server</a>. You will be prompted to authenticate with your Discord before creating a poll to prevents bots and frauds. Your Discord ID can be publicly viewed on polls you created, this is convenient if someone wants to contact you in Discord. Read our <a href="/privacy-policy">Privacy Policy</a>. There are three types of polls.</p>
+							<h2 class="subtitle">Suggestion</h2>
+							<p>Suggest new features to include or changes that should be made.</p>
+							<h2 class="subtitle">Decision</h2>
+							<p>Get advices on what you should choose from the community.</p>
+							<h2 class="subtitle">Fund request</h2>
+							<p>Only current Brain Juice's holders can create fund requesting polls and vote for them. <b>Our team will investigate its reliability and calculate if the requested funds are reasonable before verifying it.</b> When 3 days has ended and your poll is verified, you will have come back to claim the funds. Funds will be added into your bank account and you can withdraw it whenever it has more than 0.01 ETH. You can request funds with a minimum of 0.01 ETH to a maximum of 1 ETH.</p>
+							<h2 class="subtitle">Important</h2>
+							<p class="description">
+								To add an image into your description, you have to send an image to a Discord channel then copy paste the link, it will render the image in your description. Other links in the poll cannot be clicked directly. A poll will last for 3 days, and you are not allowed to create a second poll until the first one ends. There will be a report button on every poll in case the poll is deemed unfavorable to the community. Polls will usually be verified to certify reliability within 3 days of creation unless it was deemed unfavourable.
+							</p>
+							<p class="description">
+								Here are the requirements for a poll to be valid<br>
+								&emsp;• Require at least 10 upvotes<br>
+								&emsp;• Upvotes must be greater than downvotes<br>
+								&emsp;• Must be verified by our team<br>
+								&emsp;• Must be favorable to the community
+							</p>
+							<ul class="actions" style="padding-top: 5em;">
+								<li style="width:100%"><a href="faq" class="button fit scrolly">Voting Info FAQs</a></li>
+							</ul>
+							<ul class="actions">
+								<li style="width: 100%;"><a href="$" class="button fit scrolly">Back</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; 2022 Brain Juice NFT. All rights reserved.</li>
+						<li><a href="faq">FAQs</a></li>
+						<li><a href="/privacy-policy">Privacy Policy</a></li>
+						<li><a href="" onclick="alert('Smart contract will be released to public soon')">Verified Smart Contract</a></li>
+					</ul>
+				</div>
+			</footer>
+		</main>
+
+		<!-- Scripts -->
+			<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/web3modal-dynamic-import@1.11.1/dist/index.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.7/dist/umd/index.min.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/jqueryui/jquery-ui.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Brain Juice - Voting</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <meta name="author" content="Brain Juice">
+    <meta name="og:title" content="Brain Juice | Voting">
+    <meta name="og:description" content="Brain Juice is a phase-based NFT collection consist of marvelous brains. Vote here to help out the community!">
+    <meta name="og:site_name" content="Brain Juice">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="../assets/css/images/pic0.png">
+    <meta name="og:image:alt" content="Brain Juice Banner">
+    <link rel="stylesheet" href="../assets/css/main.css"/>
+    <link rel="stylesheet" href="../assets/jqueryui/jquery-ui.css"/>
+    <link rel="stylesheet" href="../assets/jqueryui/jquery-ui.structure.css"/>
+    <link rel="stylesheet" href="../assets/jqueryui/jquery-ui.theme.css"/>
+    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/2b667268-f2a4-4c49-8f96-268c69b131d4/icon.ico?v=1647060622260">
+  </head>
+  <body class="is-preload voting">
+    <div id="transition" class="white"></div>
+    <div class="rep">
+      <div class="rep-container">
+        <h2>Report</h2>
+        <textarea id="report-content" type="text" required minlength="4" maxlength="50" style="overflow-wrap: break-word;resize: none;" rows="2" placeholder="Reason. 4 to 50 characters limit."></textarea>
+        <ok class="cancel-button" onclick="closereport()">Cancel</ok>
+        <ok class="rep-button" onclick="sendreport(this)">Report</ok>
+      </div>
+    </div>
+    <div class="rep">
+      <div class="rep-container">
+        <h2>Discard poll</h2>
+        <p>Are you sure you want to discard the poll? This <b>cannot be undone</b>!</p>
+        <ok class="cancel-button" onclick="closediscard()">Cancel</ok>
+        <ok class="rep-button" onclick="confirmdiscard(this)">Discard</ok>
+      </div>
+    </div>
+    <div class="error">
+      <div class="error-container">
+        <h2>Whoops!</h2>
+        <p>Unknown Error</p>
+        <ok class="error-button" onclick="closealert()">Okay</ok>
+      </div>
+    </div>
+
+    <!-- Header -->
+      <header class="header">
+        <div class="actions header-right">
+          <a href="https://discord.gg/CPYXNpbmVz" class="icon brands fa-discord discord-header interactable"><span class="label">Discord</span></a>
+          <dropdown onclick="showDropdown()" class="dropdown icon interactable" style=""><img class="icon-2" src="../assets/css/images/dashboard.svg" width="45px" height="45px"/><span class="label">Dashboard</span></dropdown>
+          <div class="dropdown-content interactable">
+            <a href="" onclick="createPoll()">Create New Poll</a>
+            <a id="active-polls" href="" onclick="activePolls()">Active Polls</a>
+            <a id="expired-polls" href="" onclick="expiredPolls()">Expired Polls</a>
+            <a id="my-polls" href="" onclick="myPolls()">My Polls</a>
+            <a href="" onclick="gotoDashboard()">Back To Dashboard</a>
+          </div>
+        </div>
+      </header>
+
+    <main id="momentum-scroll">
+      <div id="wrapper">
+        <section class="wrapper">
+          <div class="inner" style="text-align: center;margin-top: 2em;min-height: 100vh;">
+            <h2 id="poll">Active Polls</h2>
+            <div class="poll-container voting-page">
+            </div>
+            <div class="paginator">
+              <span onclick="previousPage()" class="paginator-arrow-left icon interactable fa-light"><img class="paginator-la" src="../assets/css/images/left.svg"/><span class="label">Previous page</span></span>
+              <span onclick="nextPage()" class="paginator-arrow-right icon interactable fa-light"><img class="paginator-ra" src="../assets/css/images/showcase-right.svg"/><span class="label">Previous page</span></span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer id="footer">
+        <div class="inner">
+          <ul class="menu">
+            <li>&copy; 2022 Brain Juice NFT. All rights reserved.</li>
+            <li><a href="faq">FAQs</a></li>
+            <li><a id="v" href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="" onclick="alert('Smart contract will be released to public soon')">Verified Smart Contract</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Scripts -->
+      <script>const address = "<%- address %>";var polls = <%- polls %>;var owned = <%- owned %>;const votes = <%- votes %>;</script>
+      <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/web3modal-dynamic-import@1.11.1/dist/index.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.7/dist/umd/index.min.js"></script>
+      <script src="../assets/js/jquery.min.js"></script>
+      <script src="../assets/js/jquery.scrollex.min.js"></script>
+      <script src="../assets/js/jquery.scrolly.min.js"></script>
+      <script src="../assets/js/browser.min.js"></script>
+      <script src="../assets/js/breakpoints.min.js"></script>
+      <script src="../assets/js/util.js"></script>
+      <script src="../assets/js/main.js"></script>
+      <script src="../assets/jqueryui/jquery-ui.js"></script>
+      <script src="../assets/js/voting.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Brain Juice - Dashboard</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="author" content="Brain Juice">
+		<meta name="og:title" content="Brain Juice | Dashboard">
+		<meta name="og:description" content="Brain Juice is a phase-based NFT collection consist of marvelous brains. Dashboard for our community members!">
+		<meta name="og:site_name" content="Brain Juice">
+		<meta name="og:type" content="website">
+		<meta name="og:image" content="../assets/css/images/pic0.png">
+		<meta name="og:image:alt" content="Brain Juice Banner">
+		<link rel="stylesheet" href="../assets/css/main.css"/>
+		<link rel="stylesheet" href="../assets/jqueryui/jquery-ui.css"/>
+		<link rel="stylesheet" href="../assets/jqueryui/jquery-ui.structure.css"/>
+		<link rel="stylesheet" href="../assets/jqueryui/jquery-ui.theme.css"/>
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/2b667268-f2a4-4c49-8f96-268c69b131d4/icon.ico?v=1647060622260">
+	</head>
+	<body class="is-preload">
+		<div id="transition" class="white"></div>
+		<a href="#" class="icon interactable top"><img class="image fit" src="../assets/css/images/top.svg"/><span class="label">To the top</span></a>
+		<div class="rep">
+      <div class="rep-container">
+        <h2>Report</h2>
+        <textarea id="report-content" type="text" required minlength="4" maxlength="50" style="overflow-wrap: break-word;resize: none;" rows="2" placeholder="Reason. 4 to 50 characters limit."></textarea>
+        <ok class="cancel-button" onclick="closereport()">Cancel</ok>
+        <ok class="rep-button" onclick="sendreport(this)">Report</ok>
+      </div>
+    </div>
+    <div class="rep">
+      <div class="rep-container">
+        <h2>Discard the poll?</h2>
+        <p>Are you sure you want to discard the poll? This <b>cannot be undone</b>!</p>
+        <ok class="cancel-button" onclick="closediscard()">Cancel</ok>
+        <ok class="rep-button" onclick="confirmdiscard(this)">Discard</ok>
+      </div>
+    </div>
+    <div class="error">
+			<div class="error-container">
+				<h2>Whoops!</h2>
+				<p>Unknown Error</p>
+				<ok class="error-button" onclick="closealert()">Okay</ok>
+			</div>
+		</div>
+
+    <!-- Header -->
+      <header class="header">
+				<div class="actions header-right">
+					<a href="https://discord.gg/CPYXNpbmVz" class="icon brands fa-discord discord-header interactable"><span class="label">Discord</span></a>
+					<a href="/" class="icon interactable"><img class="icon-2" src="../assets/css/images/home.svg"/><span class="label">Home</span></a>
+				</div>
+			</header>
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Dashboard</a></li>
+							<li><a href="#one">My Brain Juice's</a></li>
+							<li><a href="#two">Voting</a></li>
+							<li><a href="#three">Personal Bank</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+		<main id="momentum-scroll" class="momentum-scroll-home">
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper fullscreen fade-up" style="justify-content: center;">
+						<div class="inner" style="text-align: center; padding: 0 1em;">
+							<h1>Welcome back!</h1>
+							<h2 class="subtitle">Connected wallet</h2>
+							<h3 id="wallet" class="subtitle"><a href="" style="border-bottom: none;" onclick="copy(this)"><%= address %></a></h3>
+							<ul class="actions" style="">
+								<li style="width: 100%; padding-top: 5em;"><a style="width:50%" href="" onclick="disconnect()" class="button fit scrolly">Disconnect</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style3 fade-up" style="display: block;">
+						<div class="inner" style="text-align: center;">
+							<h2>My Brain Juice's</h2>
+							<h3 id="ownednfts">Brain Juice's owned: </h3>
+							<div class="showcase-container">
+								<span class="showcase-arrow-left icon interactable fa-light"><img class="showcase-la" src="../assets/css/images/left.svg"/><span class="label">Left</span></span>
+								<div class="showcase">
+								</div>
+								<span class="showcase-arrow-right icon interactable fa-light"><img class="showcase-ra" src="../assets/css/images/showcase-right.svg"/><span class="label">Right</span></span>
+							</div>
+						</div>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up" style="display: flex;">
+						<div class="inner">
+							<h2>Voting</h2>
+							<p>Soon expiring polls, vote now!</p>
+							<div class="poll-container dashboard-poll">
+							</div>
+							<ul class="actions">
+								<li><a href="" onclick="gotoVoting()" class="button">Proceed to vote</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner" style="min-height: 50vh;">
+							<h2>Personal Bank</h2>
+							<p style="text-align: center;margin: 2em 0 0;">Your balance</p>
+							<div id="balance">
+								0 ETH
+							</div>
+							<ul class="actions">
+								<li style="width:100%;text-align: center;"><a style="width: 50%;" href="" onclick="withdraw()" class="button">Withdraw</a></li>
+							</ul>
+						</div>
+					</section>
+			</div>
+
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt home-footer">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; 2022 Brain Juice NFT. All rights reserved.</li>
+						<li><a href="faq">FAQs</a></li>
+						<li><a id="v" href="/privacy-policy">Privacy Policy</a></li>
+						<li><a href="" onclick="alert('Smart contract will be released to public soon')">Verified Smart Contract</a></li>
+					</ul>
+				</div>
+			</footer>
+		</main>
+
+
+		<!-- Scripts -->
+      <script>const address = "<%- address %>";var polls = <%- polls %>;var owned = <%- owned %>;const votes = <%- votes %>;</script>
+			<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/web3modal-dynamic-import@1.11.1/dist/index.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.7.7/dist/umd/index.min.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/jqueryui/jquery-ui.js"></script>
+			<script src="../assets/js/dashboard.js"></script>
+
+	</body>
+</html>

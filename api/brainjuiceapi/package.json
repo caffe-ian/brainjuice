@@ -1,0 +1,15 @@
+{
+  "name": "Brain Juice API",
+  "version": "1.0.0",
+  "description": "Image and Metdata API for Brain Juice NFT",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "author": "Brain Juice NFT",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
